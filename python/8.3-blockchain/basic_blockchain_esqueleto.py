@@ -1,6 +1,7 @@
-import hashlib # Se utiliza para calcular el hash de un bloque
-import json # Utilizado en el método de hash
-from time import time # Utilizado para dar marca temporal a los bloques
+import hashlib  # Se utiliza para calcular el hash de un bloque
+import json  # Utilizado en el método de hash
+from time import time  # Utilizado para dar marca temporal a los bloques
+
 
 class Blockchain(object):
 
@@ -18,31 +19,35 @@ class Blockchain(object):
     def new_block(self, proof, previous_hash=None):
         # TAREA 1: Definir diccionario block
         block = {
-            'index': , # Longintud de self.chain + 1
+            'index': len(self.chain), # Longintud de self.chain + 1
             'timestamp': time(),
-            'transactions': , # Se le asigna el valor de self.pending_transactions
+            'transactions': self.transacciones_pendientes, # Se le asigna el valor de self.pending_transactions
             'proof': proof,
-            'previous_hash': previous_hash or self.hash(), # Le pasamos a self.hash() el último bloque de la cadena self.chain
+            'previous_hash': previous_hash or self.hash(self.chain[-1]), # Le pasamos a self.hash() el último bloque de la cadena self.chain
         }
         # TAREA 2: Vaciar self.transacciones_pendientes, ya que ahora estas transacciones pendientes se han asociado al nuevo bloque
-
+        self.transacciones_pendientes = []
         # TAREA 3: Insertar bloque al final de la lista self.chain
-
+        self.chain.append(block)
         return block
 
     @property
     def last_block(self):
         # TAREA 4: Devolver el último bloque de la cadena self.chain
+        return self.chain[-1]
         
 
     def new_transaction(self, emisor, receptor, cantidad):
         # TAREA 5: definir diccionario de transacción
         transaction = {
+            'emisor': emisor,
+            'receptor': receptor,
+            'cantidad': cantidad
         }
         # TAREA 6: insertar la transacción en la lista self.transacciones_pendientes
-
+        self.transacciones_pendientes.append(transaction)
         # TAREA 7: Devolver el índice del último bloque incrementado en 1
-
+        return self.chain[-1]["index"] + 1
 
     # Devolvemos un hash del bloque convertido a texto previamente
     def hash(self, block):
