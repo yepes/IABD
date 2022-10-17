@@ -19,7 +19,7 @@ class Blockchain(object):
     def new_block(self, proof, previous_hash=None):
         # TAREA 1: Definir diccionario block
         block = {
-            'index': len(self.chain), # Longintud de self.chain + 1
+            'index': len(self.chain) + 1, # Longintud de self.chain + 1
             'timestamp': time(),
             'transactions': self.transacciones_pendientes, # Se le asigna el valor de self.pending_transactions
             'proof': proof,
