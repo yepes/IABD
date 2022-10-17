@@ -8,24 +8,27 @@ class Blockchain(object):
     # Método utilizado en python para inicializar los atributos del objeto
     # https://www.geeksforgeeks.org/__init__-in-python/
     def __init__(self):
-        self.chain = [] # Esta lista representa la cadena de bloques
-        self.transacciones_pendientes = [] # Lista con las transacciones que aún no han sido añadidas a un bloque, vacía por defecto
+        self.chain = []  # Esta lista representa la cadena de bloques
+        self.transacciones_pendientes = []  # Lista con las transacciones que aún no han sido añadidas a un bloque,
+        # vacía por defecto
 
         # Definimos el primer bloque con un hash arbitrario
         # https://coingeek.com/the-mystery-of-the-genesis-block/
-        self.new_block(previous_hash="The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.", proof=100)
-
+        self.new_block(previous_hash="The Times 03/Jan/2009 Chancellor on brink of second bailout for banks.",
+                       proof=100)
 
     def new_block(self, proof, previous_hash=None):
         # TAREA 1: Definir diccionario block
         block = {
-            'index': len(self.chain), # Longintud de self.chain + 1
+            'index': len(self.chain) + 1,  # Longintud de self.chain + 1
             'timestamp': time(),
-            'transactions': self.transacciones_pendientes, # Se le asigna el valor de self.pending_transactions
+            'transactions': self.transacciones_pendientes,  # Se le asigna el valor de self.pending_transactions
             'proof': proof,
-            'previous_hash': previous_hash or self.hash(self.chain[-1]), # Le pasamos a self.hash() el último bloque de la cadena self.chain
+            'previous_hash': previous_hash or self.hash(self.chain[-1]),
+            # Le pasamos a self.hash() el último bloque de la cadena self.chain
         }
-        # TAREA 2: Vaciar self.transacciones_pendientes, ya que ahora estas transacciones pendientes se han asociado al nuevo bloque
+        # TAREA 2: Vaciar self.transacciones_pendientes, ya que ahora estas transacciones pendientes se han asociado
+        # al nuevo bloque
         self.transacciones_pendientes = []
         # TAREA 3: Insertar bloque al final de la lista self.chain
         self.chain.append(block)
@@ -35,7 +38,6 @@ class Blockchain(object):
     def last_block(self):
         # TAREA 4: Devolver el último bloque de la cadena self.chain
         return self.chain[-1]
-        
 
     def new_transaction(self, emisor, receptor, cantidad):
         # TAREA 5: definir diccionario de transacción
@@ -58,6 +60,7 @@ class Blockchain(object):
         hex_hash = raw_hash.hexdigest()
 
         return hex_hash
+
 
 # Creamos la blockchain
 blockchain = Blockchain()
