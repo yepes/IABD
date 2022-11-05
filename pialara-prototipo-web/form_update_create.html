@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<!-- ********** -->
+<!-- ********** -->
+<!-- ********** -->
+<!-- HEADER -->
+<!-- ********** -->
+<!-- ********** -->
+<!-- ********** -->
+
+<header class="p-3 mb-3 border-bottom">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 link-secondary">Link 1</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Link 2</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Link 3</a></li>
+                <li><a href="#" class="nav-link px-2 link-dark">Link 4</a></li>
+            </ul>
+
+            <div class="text-end">
+                <a href="#" class="d-block link-dark text-decoration-none">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ********** -->
+<!-- header ends -->
+<!-- ********** -->
+
+
+<div class="container">
+
+    <form class="needs-validation" action="list.html">
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Campo 1</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+
+            <div class="col-sm-6">
+                <label for="lastName" class="form-label">Campo 2</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+
+            <div class="col-12">
+                <label for="address2" class="form-label">Campo 3 <span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+            </div>
+
+            <div class="col-md-5">
+                <label for="country" class="form-label">Tipo de usuario</label>
+                <select class="form-select" id="country" required="">
+                    <option value="">Seleccione...</option>
+                    <option>Administrador</option>
+                    <option>Usuario</option>
+                </select>
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+
+            <div class="col-md-4">
+                <label for="state" class="form-label">Desplegable</label>
+                <select class="form-select" id="state" required="">
+                    <option value="">Seleccione...</option>
+                    <option>Opción 1</option>
+                    <option>Opción 2</option>
+                    <option>Opción 3</option>
+                </select>
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+
+            <div class="col-md-3">
+                <label for="zip" class="form-label">Campo 4</label>
+                <input type="text" class="form-control" id="zip" placeholder="">
+                <small class="text-muted">Lorem ipsum dolor sit amet</small>
+            </div>
+        </div>
+
+        <button class="w-100 btn btn-primary btn-lg mt-4" type="submit">Guardar</button>
+    </form>
+</div>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
