@@ -43,6 +43,12 @@ db.createCollection('users', {
                     enum: ['usuario', 'admin', 'logopeda'],
                     description: "'tipo' must be a string"
                 },
+                usuarios_a_cargo: {
+                    type: 'array',
+                    items: {
+                        type: 'string'
+                    }
+                },
                 enfermedades: {
                     description: "Enfermedades del usuario",
                     type: "array",
