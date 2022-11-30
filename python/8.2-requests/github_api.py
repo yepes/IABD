@@ -1,6 +1,6 @@
 import requests
 
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "Bearer aaaaaaa"}
 result = []
 
 for i in range(1,6):
