@@ -3,3 +3,4 @@ python/**/lib
 python/**/include
 python/11-flask/code/images/*
 **/.idea
+venv
