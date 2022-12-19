@@ -1,0 +1,1 @@
+# (RA5075.2 / CE5.2a / 1p) Realiza los casos de uso 1 y 2 de interacción desde Python con DynamoDB.
