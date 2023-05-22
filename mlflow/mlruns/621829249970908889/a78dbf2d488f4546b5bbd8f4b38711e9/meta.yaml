@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jesus/Documents/proyectos/bigdata/mlflow/mlruns/621829249970908889/a78dbf2d488f4546b5bbd8f4b38711e9/artifacts
+end_time: 1684774448478
+entry_point_name: ''
+experiment_id: '621829249970908889'
+lifecycle_stage: active
+run_id: a78dbf2d488f4546b5bbd8f4b38711e9
+run_name: run_3
+run_uuid: a78dbf2d488f4546b5bbd8f4b38711e9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1684774446660
+status: 3
+tags: []
+user_id: jesus
